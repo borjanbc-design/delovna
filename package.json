@@ -1,0 +1,10 @@
+{
+  "name": "getcaffe",
+  "version": "1.0.0",
+  "description": "Get café & Lounge Bar — Скопје (Аеродром & Кисела Вода)",
+  "private": true,
+  "scripts": {
+    "start": "python3 dev-server.py 4173",
+    "dev": "python3 dev-server.py 4173"
+  }
+}
