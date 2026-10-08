@@ -1,0 +1,18 @@
+services:
+  web:
+    image: node:22
+    cpus: 0.5
+    mem_limit: 512m
+    volumes:
+      - .stack-data/uploads:/app/uploads
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:3000/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+  db:
+    image: postgres:16
+    cpus: 0.5
+    mem_limit: 512m
+    volumes:
+      - .stack-data/db:/var/lib/postgresql/data
