@@ -1,8 +1,8 @@
 services:
   web:
     image: node:22
-    cpus: 0.5
-    mem_limit: 512m
+    cpus: 0.25
+    mem_limit: 256m
     volumes:
       - .stack-data/uploads:/app/uploads
     healthcheck:
@@ -12,7 +12,7 @@ services:
       retries: 3
   db:
     image: postgres:16
-    cpus: 0.5
-    mem_limit: 512m
+    cpus: 0.25
+    mem_limit: 256m
     volumes:
       - .stack-data/db:/var/lib/postgresql/data
