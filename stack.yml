@@ -6,8 +6,3 @@ ingress:
     primary: true
     access:
       type: team
-  - name: api
-    service: web
-    port: 8000
-    access:
-      type: cas
